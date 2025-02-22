@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessibility in Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <nav class="sticky-nav">
+        <div class="sticky-nav-content">
+          <div class="sticky-nav-title">
+            <span class="main-title">accessibility</span>
+            <span class="subtitle-text">in design</span>
+          </div>
+          <ul class="sticky-nav-links">
+            <li><a href="#context">context</a></li>
+            <li><a href="#input-analysis">input analysis</a></li>
+            <li><a href="#output-analysis">output analysis</a></li>
+            <li><a href="#state-models">state models</a></li>
+            <li><a href="#redesign">redesign</a></li>
+            <li><a href="#reflection">reflection</a></li>
+          </ul>
+        </div>
+      </nav>
+      <section id="home">
+        <main class="container">
+          <div class="left-section">
+            <h1>accessibility</h1>
+            <p class="subtitle">in design</p>
+          </div>
+          <nav class="right-section">
+            <ul>
+              <li><a href="#context">context</a></li>
+              <li><a href="#input-analysis">input analysis</a></li>
+              <li><a href="#output-analysis">output analysis</a></li>
+              <li><a href="#state-models">state models</a></li>
+              <li><a href="#redesign">redesign</a></li>
+              <li><a href="#reflection">reflection</a></li>
+            </ul>
+          </nav>
+        </main>
+      </section>
+
+      <section id="context">
+        <div class="context-container">
+          <div class="context-nav">
+            <span>context</span>
+          </div>
+          <div class="context-content">
+            <p class="context-text">
+              In modern UI design, accessibility plays a huge role in ensuring
+              that <em>all</em> users can interact with the interface
+            </p>
+            <p class="context-text">
+              This case study analyzes how search boxes function across 3
+              different applications: Things, Notion, Gmail
+            </p>
+            <div class="app-grid">
+              <div class="app-item">
+                <img
+                  src="images/things-icon.png"
+                  alt="Things app icon"
+                  class="app-icon"
+                />
+                <p class="app-name">Things</p>
+                <p class="app-description">task manager</p>
+              </div>
+              <div class="app-item">
+                <img
+                  src="images/notion-icon.png"
+                  alt="Notion app icon"
+                  class="app-icon"
+                />
+                <p class="app-name">Notion</p>
+                <p class="app-description">productivity/notes<br />platform</p>
+              </div>
+              <div class="app-item">
+                <img
+                  src="images/gmail-icon.png"
+                  alt="Gmail app icon"
+                  class="app-icon"
+                />
+                <p class="app-name">Gmail</p>
+                <p class="app-description">email service</p>
+              </div>
+            </div>
+            <p class="context-text">
+              I chose these 3 programs because they are well-renowned for having
+              great design and inclusivity
+            </p>
+            <p class="context-text">
+              I wanted to evaluate the validity of these claims through the lens
+              of accessibility
+            </p>
+
+            <div class="context-nav">
+              <span id="input-analysis">input analysis</span>
+            </div>
+
+            <p class="context-text">
+              The following UI components and table analyze how users interact
+              with the search box through different input methods
+              (mouse/touchpad, keyboard, and mobile)
+            </p>
+
+            <h2 class="app-heading">
+              <img
+                src="images/things-icon.png"
+                alt="Things icon"
+                class="heading-icon"
+              />
+              Things
+            </h2>
+            <div class="interface-showcase">
+              <div class="interface-container">
+                <div class="interface-item">
+                  <h3>Primarily with a mouse or touchpad</h3>
+                  <img
+                    src="images/things-search.png"
+                    alt="Things search interface with dropdown menu"
+                    class="interface-img"
+                  />
+                </div>
+                <div class="interface-item">
+                  <h3>With only a keyboard</h3>
+                  <img
+                    src="images/things-keyboard.png"
+                    alt="Things Quick Find menu showing Recent items including Today, Upcoming, Trash, Logbook, Inbox, and CS 1951A"
+                    class="interface-img"
+                  />
+                </div>
+                <div class="interface-item">
+                  <h3>Primarily on mobile/touchscreen</h3>
+                  <img
+                    src="images/things-mobile.png"
+                    alt="Things Quick Find menu showing Recent items including Today, Upcoming, Inbox, and Logbook"
+                    class="interface-img"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <h2 class="app-heading">
+              <img
+                src="images/notion-icon.png"
+                alt="Notion icon"
+                class="heading-icon"
+              />
+              Notion
+            </h2>
+            <div class="interface-showcase">
+              <div class="interface-container">
+                <div class="interface-item">
+                  <h3>Primarily with a mouse or touchpad</h3>
+                  <img
+                    src="images/notion-mouse.png"
+                    alt="Notion search interface with mouse interaction"
+                    class="interface-img"
+                  />
+                </div>
+                <div class="interface-item">
+                  <h3>With only a keyboard</h3>
+                  <img
+                    src="images/notion-keyboard.png"
+                    alt="Notion search interface with keyboard interaction"
+                    class="interface-img"
+                  />
+                </div>
+                <div class="interface-item">
+                  <h3>Primarily on mobile/touchscreen</h3>
+                  <img
+                    src="images/notion-mobile.png"
+                    alt="Notion search interface on mobile"
+                    class="interface-img"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <h2 class="app-heading">
+              <img
+                src="images/gmail-icon.png"
+                alt="Gmail icon"
+                class="heading-icon"
+              />
+              Gmail
+            </h2>
+            <div class="interface-showcase">
+              <div class="interface-container">
+                <div class="interface-item">
+                  <h3>Primarily with a mouse or touchpad</h3>
+                  <img
+                    src="images/gmail-mouse.png"
+                    alt="Gmail search interface with mouse interaction"
+                    class="interface-img"
+                  />
+                </div>
+                <div class="interface-item">
+                  <h3>With only a keyboard</h3>
+                  <img
+                    src="images/gmail-keyboard.png"
+                    alt="Gmail search interface with keyboard interaction"
+                    class="interface-img"
+                  />
+                </div>
+                <div class="interface-item">
+                  <h3>Primarily on mobile/touchscreen</h3>
+                  <img
+                    src="images/gmail-mobile.png"
+                    alt="Gmail search interface on mobile"
+                    class="interface-img"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <table class="comparison-table">
+              <tr>
+                <th></th>
+                <th>Things</th>
+                <th>Notion</th>
+                <th>Gmail</th>
+              </tr>
+              <tr>
+                <th>Mouse/<br />Touchpad</th>
+                <td>
+                  • The UI is incredibly intuitive, with a magnifying glass icon
+                  being shown at the bottom of the application<br /><br />
+                  • When pressed, it immediately brings up a search field in the
+                  center of the application<br /><br />
+                  • When you press anywhere outside of the search field, it
+                  exits the search pop up<br /><br />
+                  • When the pre-selected search commands are pressed, it
+                  automatically completes it<br /><br />
+                  • The functionality of the search box are definitely learnable
+                  as it uses realistic iconography through the magnifying
+                  glass—a recognizable icon for search<br /><br />
+                  • Out of all 3 applications, this is the most simple and
+                  compact while still being accessible for users
+                </td>
+                <td>
+                  • To get to the search bar, the user has to open the left
+                  sidebar and click on the magnifying glass icon that says
+                  "Search"<br /><br />
+                  • This can be hard to find, especially because it's concealed
+                  within the sidebar<br /><br />
+                  • When clicked, it opens the search box in the middle of the
+                  screen and darkens the background<br /><br />
+                  • As you type, it creates suggestions based on the text<br /><br />
+                  • While the functionality of the search box is intuitive, the
+                  number of suggestions can be overwhelming for the user<br /><br />
+                  • However, it is useful that there are a plethora of recent
+                  pages that appear in the search field—essentially predicting
+                  your prompts<br /><br />
+                  • This UI is definitely more cluttered when compared to Things
+                  or Gmail; however, it is more feature-rich
+                </td>
+                <td>
+                  • The search box is prominently placed at the top of the
+                  screen<br /><br />
+                  • After clicking on the search box, it provides basic
+                  suggestions and previously searched queries<br /><br />
+                  • The UI is intuitive and simple<br /><br />
+                  • It is designed to be used by the average consumer<br /><br />
+                  • It is fairly memorable as the Gmail design has been
+                  relatively the same for the past few years<br /><br />
+                  • In terms of accessibility, I would say it is ranked the
+                  highest out of all 3 platforms
+                </td>
+              </tr>
+              <tr>
+                <th>Keyboard</th>
+                <td>
+                  • To initiate the search box, the user can press Cmd + F which
+                  leads to the same search box component as using the magnifying
+                  glass<br /><br />
+                  • After typing a specific keyword or pre-selected search
+                  commands, the user can use the arrow keys to either move their
+                  selection up or down<br /><br />
+                  • This command and interaction is intuitive and follows
+                  conventional navigation<br /><br />
+                  • It possesses all functionality that a search box should
+                  have—especially with added smart suggestions as you type<br /><br />
+                  • Again, I would say that this UX ranks highly in terms of
+                  accessibility and intuitive input
+                </td>
+                <td>
+                  • To start the search box, the user can press Cmd + K, which
+                  results in the search command to be executed<br /><br />
+                  • The user can then use the arrow keys to move up or down in
+                  the search results and use tab to switch to the filters<br /><br />
+                  • Once the command is learned by a user, it is much easier to
+                  access and use
+                </td>
+                <td>
+                  • There is no real way to use a command to open the search bar
+                  in Gmail<br /><br />
+                  • However, the user can use the tab key to switch through each
+                  UI element on the screen<br /><br />
+                  • While inefficient, it does work as intended<br /><br />
+                  • This is fairly learnable and does follow basic accessibility
+                  standards
+                </td>
+              </tr>
+              <tr>
+                <th>Mobile/<br />Touchscreen</th>
+                <td>
+                  • On the Things mobile app, there are 2 ways to access the
+                  search box<br /><br />
+                  • First, is to go to the main menu page and click on the top
+                  search bar<br /><br />
+                  • The other meethod is to swipe down from anywhere in the
+                  app<br /><br />
+                  • The former method is definitely more intuitive; however, the
+                  latter is meant for power users who care about efficiency and
+                  ease of access<br /><br />
+                  • However, after learning the swipe to search feature, it is
+                  both memorable and efficient<br /><br />
+                  • To cancel out of the search field, there is a cancel button
+                  on the top right and the user can also click anywhere outside
+                  of the app
+                </td>
+                <td>
+                  • On the Notion app, there is a magnifying glass icon in the
+                  bottom bar which is accessible in all parts of app<br /><br />
+                  • The UI of the actual search box is nearly identical to the
+                  desktop app<br /><br />
+                  • It provides suggestions as you type and contains a cancel
+                  button to exit out of the search field in the top right<br /><br />
+                  • The functionality is extremely simple and is shared across a
+                  majority of mobile apps (having the search icon on the bottom
+                  bar)
+                </td>
+                <td>
+                  • Similar to the browser version on desktop, the mobile app
+                  also places the search bar prominently on the
+                  screen—positioned on the top of the screen<br /><br />
+                  • When pressed, it opens the same options—providing simple
+                  suggestions such as "From", "To", "Date", etc<br /><br />
+                  • Furthermore, it also includes the search query history<br /><br />
+                  • It includes an "X" to exit out of the search field on the
+                  top right<br /><br />
+                  • The overall search UI in the Gmail app is easy to use and
+                  intuitive<br /><br />
+                  • I would rank it similar to the Things app
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="output-analysis">
+        <div class="context-container">
+          <div class="context-nav">
+            <span>output analysis</span>
+          </div>
+          <div class="context-content">
+            <p class="context-text">
+              Evaluating the output through the lens of design is just as
+              important. Outputs refer to the representation of a current state.
+              I aimed to analyze how the output changes through different use
+              cases—with a special emphasis on focus order and screen reader
+              navigation
+            </p>
+
+            <table class="comparison-table">
+              <tr>
+                <th></th>
+                <th>Things</th>
+                <th>Notion</th>
+                <th>Gmail</th>
+              </tr>
+              <tr>
+                <th>Clicked/<br />Pressed</th>
+                <td>
+                  • When an item is pressed, the background of the item changes
+                  to blue or dark grey. For example, for a task, it changes to
+                  blue, whereas for the sidebar, it turns grey.
+                </td>
+                <td>
+                  • When a page or item in Notion is pressed, the background
+                  changes to dark grey, similar to the Things sidebar.
+                </td>
+                <td>
+                  • For buttons and the sidebar, when pressed the background
+                  gets a light grey color that contrasts with the background.<br />
+                  • When a sidebar item is clicked, it changes to blue.
+                </td>
+              </tr>
+              <tr>
+                <th>Hovered</th>
+                <td>
+                  • When filtering tags are hovered over, the outline turns
+                  grey, to indicate that you are on the particular button
+                  tag.<br />
+                  • When the user hovers over the sidebar collapsable sections,
+                  the accordion icon appears.
+                </td>
+                <td>
+                  • When all components in a page are hovered over, the
+                  background turns grey.<br />
+                  • Invisible buttons and actions also become visible when the
+                  cursor hovers over them.
+                </td>
+                <td>
+                  • For the compose button and email items, it creates a drop
+                  shadow effect when hovered over.<br />
+                  • For the side bar and other buttons, it changes the
+                  background to a light grey shade.
+                </td>
+              </tr>
+              <tr>
+                <th>Drag and<br />Drop</th>
+                <td>
+                  • When a task is dragged using the cursor, it follows it and
+                  can be moved to different tabs on the sidebar or reorganized
+                  on the page.
+                </td>
+                <td>
+                  • When components on a page are dragged, it selects it.<br />
+                  • However, when items in the sidebar are dragged and dropped,
+                  it moves them to the new cursor location.
+                </td>
+                <td>
+                  • When an email is dragged, it can be moved to new category
+                  folder such as social, updates, forums, promotions, spam,
+                  trash, etc.
+                </td>
+              </tr>
+              <tr>
+                <th>Focus<br />Order</th>
+                <td>
+                  • When the tab key is pressed, it iterates through the
+                  different tasks in Things.<br />
+                  • After the end of the tasks, it goes to the sidebar menu such
+                  as the Today, Upcoming, Anytime, and Someday lists.<br />
+                  • To increase efficiency, Things also has built-in commands
+                  for the different actions.
+                </td>
+                <td>
+                  • For Notion, pressing the tab key is similar to Things.<br />
+                  • To elaborate, it allows the user to move down the page,
+                  iterating through the different blocks of text.<br />
+                  • When the sidebar is opened, it enables the user to move
+                  through the menu items as well, such as the different
+                  pages/sub-pages.
+                </td>
+                <td>
+                  • When the user presses tab in Gmail, it iterates through the
+                  top bar, Compose, refresh, filter, etc. then moves to the
+                  bottom and side bar.<br />
+                  • Pressing enter either opens a particular folder or clicks
+                  the button.<br />
+                  • However, using tabs, the user cannot move through the
+                  different emails.
+                </td>
+              </tr>
+              <tr>
+                <th>Screen<br />Reader<br />Output</th>
+                <td>
+                  • When using the screen reader in Things, it announces the
+                  different aspects of the UI.<br />
+                  • For instance, it describes the task page as a table and then
+                  reads of each "element" of the tasks.
+                </td>
+                <td>
+                  • When using the screen reader in Notion, it announces the
+                  different fields on the page: title, icon, body, etc.<br />
+                  • It also states the different actions such as being able to
+                  change text and the composition of the page.<br />
+                  • Furthermore, it reads out the menu items.
+                </td>
+                <td>
+                  • When using the screen reader in Gmail, it reads out the
+                  different components of the page.<br />
+                  • For instance, it reads out the various folders (Promotions,
+                  Starred, etc.).<br />
+                  • Also, it announces the button text such as the ability to
+                  compose the email.
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="state-models">
+        <div class="context-container">
+          <div class="context-nav">
+            <span>state models</span>
+          </div>
+          <div class="context-content">
+            <p class="context-text">
+              The following 2 state models showcase how a user may interact with
+              a search box component in Things
+            </p>
+
+            <h2 class="app-heading">Search Box State Model</h2>
+            <div class="interface-showcase">
+              <div class="interface-container">
+                <div class="interface-item">
+                  <h3>Mouse/Touchpad Interaction</h3>
+                  <img
+                    src="images/searchbox-mouse.png"
+                    alt="State model showing search box interactions with mouse"
+                    class="interface-img"
+                  />
+                </div>
+                <div class="interface-item">
+                  <h3>Keyboard Interaction</h3>
+                  <img
+                    src="images/searchbox-keyboard.png"
+                    alt="State model showing search box interactions with keyboard"
+                    class="interface-img"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <h2 class="app-heading">Trade-off Analysis State Model</h2>
+            <p class="context-text">
+              I made an intentional trade-off for both mouse/touchpad and
+              keyboard interaction where double tapping and pressing option +
+              tab would autocomplete the query suggestion
+            </p>
+            <p class="context-text">
+              This would lead to greater efficiency and is fairly accessible;
+              however, since it is a new functionality, it comes with
+              learnability and memorability concerns
+            </p>
+            <div class="interface-showcase">
+              <div class="interface-container">
+                <div class="interface-item">
+                  <h3>Mouse/Touchpad Interaction</h3>
+                  <img
+                    src="images/trade-off-mouse.png"
+                    alt="State model showing trade-off analysis with mouse interaction"
+                    class="interface-img"
+                  />
+                </div>
+                <div class="interface-item">
+                  <h3>Keyboard Interaction</h3>
+                  <img
+                    src="images/trade-off-keyboard.png"
+                    alt="State model showing trade-off analysis with keyboard interaction"
+                    class="interface-img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="redesign">
+        <div class="context-container">
+          <div class="context-nav">
+            <span>redesign</span>
+          </div>
+          <div class="context-content">
+            <h2 class="app-heading">Component Redesign</h2>
+            <p class="context-text">
+              Using everything I learned when it comes to learnability,
+              memorability, efficiency, and accessibility, I redesigned the
+              search box in Things to contain the autocomplete functionality as
+              well as an info icon for details regarding keyboard shortcuts
+            </p>
+            <div class="interface-showcase">
+              <div class="interface-container">
+                <div class="interface-item">
+                  <img
+                    src="images/component-redesign.png"
+                    alt="Redesigned component showing improved accessibility features"
+                    class="interface-img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="reflection">
+        <div class="context-container">
+          <div class="context-nav">
+            <span>reflection</span>
+          </div>
+          <div class="context-content">
+            <p class="context-text">
+              • In terms of usability and accessibility, all 3 platforms
+              (Things, Notion, and Gmail) faired well as they were easy to
+              navigate, and use, and displayed the functionality to the user.
+              For instance, Things was incredibly intuitive when it came adding
+              and viewing the different task lists; however, it was not the best
+              for accessibility since some parts of the application were
+              difficult to navigate to using focus order and screen reader. In
+              my design, I used Thing's user interface and Gmail's accessibility
+              into account to meet both aspects of design.
+            </p>
+
+            <p class="context-text">
+              • The accessibility considerations that were not not addressed in
+              the components was discoverability. It is important that the user
+              can discover the functionality of the interface—resulting in me
+              including automatic suggestions and an info section in my design.
+            </p>
+
+            <p class="context-text">
+              • Based on the video, "mismatch" refers to the gap between a
+              person's abilities and the design of a particular product; I
+              effectively bridge this gap by allowing non-tech savvy individuals
+              use the search box with automatic suggestions and improving
+              discoverability.
+            </p>
+
+            <p class="context-text">
+              • An example of how the inaccessibilitity of Notion's search box
+              (input) when using a mouse/trackpad could negatively impact users
+              with impairments is that it is placed in the side bar, essentially
+              concealed—this could make it harder for a screen reader to detect
+              it. Another example which relates to output is with the
+              inaccessibility of Gmail's drag and drop function which doesn't
+              show the user where a email could be dropped to.
+            </p>
+
+            <p class="context-text">
+              • Mouse and keyboard would most commonly be prioritized when
+              creating user interface components because most websites are
+              accessed on a laptop/desktop. This impacts the user experience by
+              having icons and text more smaller on the screen because a mouse
+              is more precise; this results in a site on a mobile device being
+              smaller and harder to press and navigate.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="modal-overlay">
+      <div class="modal-content">
+        <button class="modal-close">×</button>
+        <img src="" alt="" />
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>
+        <span class="designer-prefix">designed by </span
+        ><span class="designer-name">Priyam Parekh</span>
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
